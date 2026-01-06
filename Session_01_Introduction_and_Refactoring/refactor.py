@@ -1,9 +1,9 @@
 from mlx_lm.models.cache import load_prompt_cache, save_prompt_cache
 from utilities import get_model, create_cache, generate_response, generate_response_with_system, list_available_models
 
-model, tokenizer, MODEL_ID = get_model("llama")
+model, tokenizer, MODEL_ID = get_model("qwen")
 
-# list_available_models()
+list_available_models()
 
 generate_response(model, tokenizer, "What is the capital of the United States?", model_id=MODEL_ID)
 generate_response(model, tokenizer, "What is the capital of the United Moons?", model_id=MODEL_ID)
