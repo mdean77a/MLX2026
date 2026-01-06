@@ -14,7 +14,26 @@ The last cell of the setup.ipynb was copied into setup.py.  If you execute this 
 If you copy setup.py into a fresh directory, you should also copy pyproject.toml into that directory and type `uv sync` to install the dependencies.  Then you should be able to execute the script from the terminal by typing `uv run python setup.py`.
 
 ## Refactor Notebook
-This notebook will start with the code from the setup.py script and refactor it into a more modular structure. The ultimate result of this refactoring will be put into a single script that can be run from the command line.
+This notebook will start with the code from the setup.py script and refactor it into a more modular structure. The ultimate result of this refactoring will be put into a single script that can be run from the command line.  Here is our final file structure after refactoring:
+
+```
+MLX2026/
+├── cache_files/                      # Model prompt cache storage
+│   └── Qwen3-4B-Instruct-2507-4bit.safetensors
+├── utilities/                        # Core utility modules
+│   ├── __init__.py                  # Package initialization
+│   ├── create_cache.py              # Prompt cache creation utilities
+│   ├── get_model.py                 # Model loading with enum support
+│   └── utils.py                     # Response generation utilities
+├── refactor.ipynb                   # Main refactored notebook
+├── refactor.py                      # Python script version
+├── setup.ipynb                      # Initial setup and exploration
+├── setup.py                         # Package setup configuration
+├── pyproject.toml                   # Project dependencies
+├── uv.lock                          # UV package manager lock file
+├── LICENSE                          # Project license
+└── README.md                        # Project documentation
+```
 
 ### Refactor Script
-This script is the refactored version of the setup.py script using the modulare structure described in the notebook.
+This script is the refactored version of the setup.py script using the modular structure described in the notebook.  
