@@ -1,7 +1,7 @@
 from mlx_lm.models.cache import load_prompt_cache, save_prompt_cache
 from utilities import get_model, create_cache, generate_response, generate_response_with_system, list_available_models
 
-model, tokenizer, MODEL_ID = get_model("llama")
+model, tokenizer, MODEL_ID = get_model("gpt")
 
 # list_available_models()
 
